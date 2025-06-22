@@ -3,7 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="main.js" defer></script>
+    <title>PodcastApp</title>
   </head>
-  <body></body>
+  <body>
+    <header class="app-header">
+      <h1>PodcastApp</h1>
+      <div class="header-controls">
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <img src="assets/user-icon.png" alt="User Icon" class="user-icon" />
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="filters">
+        <select id="genreFilter">
+          <option value="all">All Genres</option>
+        </select>
+        <select id="sortFilter">
+          <option value="recent">Recently Updated</option>
+        </select>
+      </div>
+
+      <section id="podcastList" class="podcast-grid"></section>
+    </main>
+
+    <div id="podcastModal" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h2 id="modalTitle">Podcast Title</h2>
+        <img id="modalImage" src="" alt="Large Cover Image" />
+        <h3>Description</h3>
+        <p id="modalDescription"></p>
+        <h3>Genres</h3>
+        <div class="genres" id="modalGenres"></div>
+        <p class="updated-date" id="modalUpdated"></p>
+        <h3>Seasons</h3>
+        <div id="modalSeasons"></div>
+      </div>
+    </div>
+  </body>
 </html>
