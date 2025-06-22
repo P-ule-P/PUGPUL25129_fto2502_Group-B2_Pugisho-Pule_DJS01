@@ -29,6 +29,8 @@
 
         <select id="sortFilter" class="filter-select">
           <option value="recent">Recently Updated</option>
+          <option value="recent">Most Popular</option>
+          <option value="recent">Newest</option>
         </select>
       </div>
 
@@ -39,6 +41,7 @@
       <div class="modal-content">
         <button class="close-modal">&times;</button>
         <h2 id="modalTitle">Podcast Title</h2>
+
         <div class="modal-header">
           <img
             id="modalImage"
@@ -57,6 +60,7 @@
               <h3>Genres</h3>
               <div class="genres" id="modalGenres"></div>
             </section>
+            <p class="updated-date" id="modalUpdated"></p>
           </div>
         </div>
 
@@ -68,7 +72,6 @@
           <h3>Seasons</h3>
           <div id="modalSeasons"></div>
         </section>
-        <p class="updated-date" id="modalUpdated"></p>
         <div id="modalSeasons"></div>
       </div>
     </div>

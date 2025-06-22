@@ -38,7 +38,7 @@ export function showModal(podcast) {
     .map(
       (s) => `
     <div>
-      <strong>${s.title}</strong> — ${s.episodes} episodes
+      <strong>${s.title}</strong> <span class="episode-count"> ${s.episodes} episodes
     </div>
   `
     )
