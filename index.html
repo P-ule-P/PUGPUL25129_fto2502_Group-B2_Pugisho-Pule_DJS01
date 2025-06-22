@@ -9,19 +9,24 @@
   </head>
   <body>
     <header class="app-header">
-      <h1>PodcastApp</h1>
+      <div class="logo-title">
+        <img src="assets/logo.png" alt="Podcast Logo" class="logo-icon" />
+        <h1>PodcastApp</h1>
+      </div>
       <div class="header-controls">
-        <input type="text" id="searchInput" placeholder="Search..." />
-        <img src="assets/user-icon.png" alt="User Icon" class="user-icon" />
+        <img src="assets/search.png" alt="Search" class="icon search-icon" />
+        <img src="assets/user.png" alt="User" class="icon user-icon" />
       </div>
     </header>
 
     <main class="container">
       <div class="filters">
-        <select id="genreFilter">
+        <label for="genreFilter" class="filter-label">Filter by:</label>
+        <select id="genreFilter" class="filter-select">
           <option value="all">All Genres</option>
         </select>
-        <select id="sortFilter">
+
+        <select id="sortFilter" class="filter-select">
           <option value="recent">Recently Updated</option>
         </select>
       </div>
@@ -33,13 +38,36 @@
       <div class="modal-content">
         <button class="close-modal">&times;</button>
         <h2 id="modalTitle">Podcast Title</h2>
-        <img id="modalImage" src="" alt="Large Cover Image" />
-        <h3>Description</h3>
-        <p id="modalDescription"></p>
-        <h3>Genres</h3>
-        <div class="genres" id="modalGenres"></div>
+        <div class="modal-header">
+          <img
+            id="modalImage"
+            src=""
+            alt="Large Cover Image"
+            class="modal-image"
+          />
+
+          <div class="modal-info">
+            <section class="modal-section">
+              <h3>Description</h3>
+              <p id="modalDescription" class="modal-description"></p>
+            </section>
+
+            <section class="modal-section">
+              <h3>Genres</h3>
+              <div class="genres" id="modalGenres"></div>
+            </section>
+          </div>
+        </div>
+
+        <section class="modal-section">
+          <p class="updated-date" id="modalUpdated"></p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Seasons</h3>
+          <div id="modalSeasons"></div>
+        </section>
         <p class="updated-date" id="modalUpdated"></p>
-        <h3>Seasons</h3>
         <div id="modalSeasons"></div>
       </div>
     </div>
