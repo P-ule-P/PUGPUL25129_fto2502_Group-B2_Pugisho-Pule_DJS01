@@ -3,9 +3,11 @@ import { showModal } from "./scripts/UI/modal.js";
 import { formatTimeAgo } from "./scripts/utils/time.js";
 
 /**
- * Utility to get genre names by podcast's genre ID array.
- * @param {number[]} genreIds
- * @returns {string[]}
+ * Maps genre ID numbers to their corresponding genre names.
+ *
+ * @function mapGenreIdsToNames
+ * @param {number[]} genreIds - Array of genre IDs.
+ * @returns {string[]} Array of genre name strings.
  */
 function mapGenreIdsToNames(genreIds) {
   return genreIds.map((id) => {
@@ -14,6 +16,13 @@ function mapGenreIdsToNames(genreIds) {
   });
 }
 
+/**
+ * Renders a list of podcast cards into the main grid.
+ *
+ * @function renderPodcasts
+ * @param {Object[]} list - Array of podcast objects.
+ * @returns {void}
+ */
 function renderPodcasts(list) {
   const container = document.getElementById("podcastList");
   container.innerHTML = "";
@@ -37,6 +46,12 @@ function renderPodcasts(list) {
   });
 }
 
+/**
+ * Populates the genre filter dropdown with available genres.
+ *
+ * @function populateGenreFilter
+ * @returns {void}
+ */
 function populateGenreFilter() {
   const genreFilter = document.getElementById("genreFilter");
   genres.forEach((g) => {

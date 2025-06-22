@@ -1,7 +1,16 @@
 /**
- * Convert ISO date to "Updated X time ago" format.
- * @param {string} isoDate
- * @returns {string}
+ * @file time.js
+ * @description Utility to convert ISO date strings to human-readable relative time strings.
+ */
+/**
+ * Converts an ISO date string into a relative "time ago" format like:
+ * - "Updated 2 days ago"
+ * - "Updated 5 weeks ago"
+ * - "Updated just now"
+ *
+ * @function formatTimeAgo
+ * @param {string} isoDate - A date string in ISO 8601 format.
+ * @returns {string} A user-friendly relative time description.
  */
 export function formatTimeAgo(isoDate) {
   const now = new Date();

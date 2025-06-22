@@ -2,8 +2,10 @@ import { seasons } from "../initialData/data.js";
 import { genres } from "../initialData/data.js";
 
 /**
- * Open modal with podcast details
- * @param {Object} podcast
+ * Displays a modal with detailed podcast information.
+ * @function showModal
+ * @param {Object} podcast - The podcast object to display in the modal.
+ * @returns {void}
  */
 export function showModal(podcast) {
   const modal = document.getElementById("podcastModal");

@@ -1,3 +1,8 @@
+/**
+ * @file data.js
+ * @description Contains initial static data for podcasts, genres, and seasons.
+ * This module provides core structured content to be rendered across the app.
+ */
 export const podcasts = [
   {
     id: "10716",

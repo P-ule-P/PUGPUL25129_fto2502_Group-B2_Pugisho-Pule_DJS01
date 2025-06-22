@@ -1,7 +1,15 @@
 /**
- * Save a value in local storage
- * @param {string} key
- * @param {any} value
+ * @file storage.js
+ * @description Utility functions for interacting with localStorage.
+ * Encapsulates browser API usage for reuse and testability.
+ */
+/**
+ * Saves any serializable value to localStorage under the given key.
+ *
+ * @function saveToStorage
+ * @param {string} key - The storage key.
+ * @param {any} value - The value to store (will be JSON.stringified).
+ * @returns {void}
  */
 export function saveToStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
